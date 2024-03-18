@@ -1,0 +1,145 @@
+@use "global" as g;
+
+.p-about__img--pattern {
+  position: absolute;
+  @include g.mq(md) {
+    right: calc(50% + 527px);
+    width: 250px;
+    top: 60px;
+  }
+
+  img {
+  }
+}
+
+.p-about__img--left-bg {
+  position: absolute;
+  top: 427px;
+  right: calc(50% + 127.5px);
+
+  width: 200px;
+  img {
+  }
+  @include g.mq(sm) {
+    right: calc(50% + 210.5px);
+  }
+  @include g.mq(md) {
+    width: 480px;
+    top: 154px;
+    right: calc(50% + 480px);
+  }
+  @include g.mq(lg) {
+    right: calc(50% + 614px);
+  }
+}
+
+.p-about__img--step {
+  bottom: 53px;
+  position: absolute;
+  right: calc(50% + 45.5px);
+  width: 144px;
+  z-index: -2;
+
+  img {
+  }
+  @include g.mq(sm) {
+    left: 0;
+  }
+  @include g.mq(md) {
+    width: 427px;
+    bottom: 149px;
+    left: auto;
+    right: calc(50% + 244px);
+  }
+  @include g.mq(lg) {
+    right: calc(50% + 432px);
+  }
+}
+
+.p-about__img--foot {
+  position: absolute;
+  top: 22px;
+  left: calc(50% + 133.5px);
+  width: 54px;
+  img {
+  }
+  @include g.mq(md) {
+    top: 0;
+    left: calc(50% + 490px);
+    width: 100px;
+  }
+}
+
+.p-about__img--right-bg {
+  position: absolute;
+  top: 305px;
+  left: calc(50% + 127.5px);
+  width: 200px;
+  img {
+  }
+  @include g.mq(sm) {
+    left: calc(50% + 220px);
+  }
+  @include g.mq(md) {
+    top: 153px;
+    width: 480px;
+    left: calc(50% + 460px);
+  }
+  @include g.mq(lg) {
+    left: calc(50% + 560px);
+  }
+}
+
+.p-about__img--goods {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  bottom: calc(100px + 117px);
+  left: calc(50% + 119px);
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  @include g.mq(sm) {
+    width: 60px;
+    height: 60px;
+    left: calc(50% + 280px);
+  }
+  @include g.mq(md) {
+    width: 101px;
+    height: 100.047px;
+    bottom: 585.63px;
+    left: calc(50% + 505px);
+  }
+}
+
+.p-about__img--wave {
+  position: absolute;
+
+  img {
+  }
+  @include g.mq(md) {
+    width: 873.922px;
+    left: calc(50% + 448px);
+    bottom: 634px;
+  }
+}
+
+.p-about__img--wallet {
+  position: absolute;
+  left: calc(50% - 2.5px);
+  bottom: calc(100px + 58.2px);
+
+  width: 133px;
+  img {
+  }
+  @include g.mq(sm) {
+    left: calc(50% + 160px);
+    width: 150px;
+  }
+  @include g.mq(md) {
+    width: 308px;
+    left: calc(50% + 374px);
+    bottom: 379px;
+  }
+}

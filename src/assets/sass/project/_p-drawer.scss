@@ -1,0 +1,42 @@
+@use "../global/" as g;
+@use "sass:map";
+
+//////////////////////////////////////////////////
+//p-drawer
+//////////////////////////////////////////////////
+.p-drawer__nav {
+  background-color: g.$color-white;
+  position: fixed;
+  top: 64px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  padding: 82px 0;
+  z-index: map.get(g.$z-index, drawer);
+
+  //   height: calc(100dvh - 64px);
+  transform: translateY(calc(-100% - 82px));
+  transition: transform 0.5s;
+  // opacity: 0;
+
+  &.is-open-drawer {
+    transform: translateY(0);
+    // opacity: 1 !important;
+  }
+}
+
+.p-drawer__list {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.p-drawer__item {
+  .p-drawer__item__link {
+    font-size: g.$fz-sm;
+    @include g.mq(md) {
+      font-size: g.$fz-xs;
+    }
+  }
+}

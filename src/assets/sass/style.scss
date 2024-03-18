@@ -1,0 +1,10 @@
+@use "global";
+@use "foundation";
+@use "layout";
+@use "component";
+@use "project";
+@use "utility";
+
+// 해당 폴더 안에 모든 파일명을 지정하기보다는 해당 폴더의 index 파일을 통해 관리하는 것이 좋다.
+// 즉, 해당 폴더 안에 index 파일을 생성하고 그 index파일에서 같은 폴더에 있는 파일들을 불러온다.
+// 그 후 해당 @use로 폴더명만 작성시 자동으로 해당 폴더 안에 있는 index 파일을 찾아서 불러온다.

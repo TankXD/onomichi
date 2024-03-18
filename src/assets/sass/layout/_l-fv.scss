@@ -1,0 +1,13 @@
+@use "../global" as g;
+
+.l-fv__inner {
+  max-width: g.$inner-width-sp;
+  margin-inline: auto;
+  padding-top: 18px;
+  padding-inline: 20px;
+  @include g.mq(md) {
+    max-width: g.$inner-width-md;
+    padding-inline: 0;
+    padding-top: 34px;
+  }
+}

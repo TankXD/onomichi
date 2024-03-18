@@ -1,0 +1,330 @@
+@use "../global" as g;
+
+.p-how-to-enter__inner {
+  position: relative;
+}
+
+.p-how-to-enter__map-img {
+  position: absolute;
+  top: 0;
+  right: calc(50% + 39px);
+  width: 149px;
+  z-index: -1;
+  img {
+  }
+  @include g.mq(sm) {
+    right: calc(50% + 120px);
+  }
+  @include g.mq(md) {
+    top: -60px;
+    right: calc(50% + 300px);
+
+    width: 420px;
+  }
+}
+
+.p-how-to-enter__cats {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+
+  left: calc(50% + 58px);
+  @include g.mq(sm) {
+    left: calc(50% + 120px);
+  }
+  @include g.mq(md) {
+    left: calc(50% + 287px);
+  }
+}
+
+.p-how-to-enter__cat-img {
+  width: 160px;
+  height: 85px;
+  position: relative;
+  @include g.mq(md) {
+    width: 364px;
+    height: 191px;
+  }
+}
+
+.p-how-to-enter__cat-cheese {
+  position: absolute;
+  top: 0;
+  left: 0px;
+  width: 105px;
+  height: 63px;
+  @include g.mq(md) {
+    width: 238px;
+    height: 141px;
+    top: -26px;
+    left: 0;
+  }
+}
+
+.p-how-to-enter__cat-black {
+  position: absolute;
+  top: 5px;
+  left: 66px;
+  width: 94px;
+  height: 80px;
+  @include g.mq(md) {
+    width: 214px;
+    height: 181px;
+    top: -16px;
+    left: 150px;
+  }
+}
+
+.p-how-to-enter__foot-top,
+.p-how-to-enter__foot-bottom,
+.p-how-to-enter__foot-reverse {
+  img {
+    width: 55px;
+    height: 120px;
+    @include g.mq(md) {
+      width: 70px;
+      height: auto;
+      aspect-ratio: 55/120;
+    }
+    @include g.mq(lg) {
+      width: 100px;
+      height: 220px;
+    }
+  }
+}
+
+.p-how-to-enter__foot-top {
+  position: absolute;
+
+  top: 74px;
+  right: 20px;
+  @include g.mq(sm) {
+    right: 0;
+  }
+  @include g.mq(md) {
+    top: 148px;
+    right: 0;
+  }
+  @include g.mq(lg) {
+    right: 36px;
+  }
+  img {
+  }
+}
+
+.p-how-to-enter__foot-bottom {
+  position: absolute;
+  top: 549.55px;
+  left: 20px;
+  @include g.mq(sm) {
+    left: 0;
+  }
+  @include g.mq(md) {
+    top: 630px;
+    left: 0;
+  }
+  @include g.mq(lg) {
+    top: 580px;
+    left: 36px;
+  }
+  img {
+  }
+}
+
+.p-how-to-enter__foot-reverse {
+  position: absolute;
+  bottom: 362px;
+  right: 20px;
+  @include g.mq(sm) {
+    right: 0;
+  }
+  img {
+  }
+}
+
+///content
+///
+///
+
+.p-how-to-enter__content {
+  @include g.mq(md) {
+    max-width: 1024px;
+    margin-inline: auto;
+  }
+}
+
+.p-how-to-enter__steps {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  @include g.mq(md) {
+    margin-top: 40px;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  @include g.mq(lg) {
+    gap: 32px;
+  }
+}
+
+.p-how-to-enter__step {
+  text-align: center;
+  position: relative;
+  &:nth-child(2) {
+    @include g.mq(md) {
+      margin-top: 68px;
+    }
+  }
+
+  @include g.mq(md) {
+    flex: 1;
+    width: 260px;
+  }
+  @include g.mq(lg) {
+    width: 320px;
+  }
+  & + & {
+    &::after {
+      content: "";
+      position: absolute;
+      width: 7px;
+      height: 34px;
+      left: 50%;
+      top: -34px;
+      transform: translateX(-50%);
+      background: url("../img/how-to-enter/hte-tail-sp.png") no-repeat center
+        center / contain;
+      z-index: 1;
+      @include g.mq(md) {
+        background: url("../img/how-to-enter/hte-tail-pc.png") no-repeat center
+          center / contain;
+        transform: translateY(-50%);
+        width: 96px;
+        height: auto;
+        aspect-ratio: 113 / 24;
+
+        @include g.mq(lg) {
+          width: 113px;
+          height: 24px;
+        }
+      }
+    }
+  }
+  &:nth-child(2) {
+    &::after {
+      @include g.mq(md) {
+        left: -72px;
+        top: 145px;
+      }
+      @include g.mq(lg) {
+        left: -97px;
+        top: 149px;
+      }
+    }
+  }
+  &:nth-child(3) {
+    &::after {
+      @include g.mq(md) {
+        left: -61px;
+        top: 209px;
+      }
+      @include g.mq(lg) {
+        left: -88px;
+        top: 217px;
+      }
+    }
+  }
+}
+
+.p-how-to-enter__step-img {
+  width: 196px;
+  height: 210px;
+
+  margin-inline: auto;
+  @include g.mq(md) {
+    width: 260px;
+    height: auto;
+    aspect-ratio: 196 / 210;
+  }
+  @include g.mq(lg) {
+    width: 280px;
+    height: 300px;
+  }
+  img {
+    // width: 100%;
+    // height: 100%;
+  }
+}
+
+.p-how-to-enter__step-body {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  // padding-block: 16px;
+  @include g.mq(md) {
+    margin-top: 26px;
+    padding-bottom: 0;
+  }
+}
+
+.p-how-to-enter__title {
+  font-weight: g.$fw-bold;
+  @include g.mq(md) {
+    font-size: g.$fz-lg;
+  }
+}
+
+.p-how-to-enter__description {
+  font-size: g.$fz-xs;
+
+  @include g.mq(md) {
+    font-size: g.$fz-sm;
+  }
+  @include g.mq(lg) {
+    font-size: g.$fz-md;
+  }
+}
+
+.p-how-to-enter__follow-btn {
+  a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+
+    background-color: g.$color-white;
+    img {
+      width: 20px;
+      filter: g.$filter-svg;
+      @include g.mq(md) {
+        width: 24px;
+      }
+    }
+    span {
+      font-size: g.$fz-sm;
+      @include g.mq(md) {
+        font-size: g.$fz-md;
+      }
+    }
+  }
+}
+
+.p-how-to-enter__button {
+  text-align: center;
+  margin-top: 15px;
+  @include g.mq(md) {
+    text-align: center;
+    margin-top: 49px;
+    .c-button {
+      padding: calc(10px - 2px) calc(40px - 2px) calc(12px - 2px)
+        calc(40px - 2px);
+      border-width: 3px;
+      font-size: g.$fz-lg;
+    }
+  }
+}

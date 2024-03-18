@@ -1,0 +1,272 @@
+@use "../global/" as g;
+
+.p-fv {
+  position: relative;
+  background-color: g.$color-l-blue;
+}
+
+.p-fv__bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 156px);
+  overflow: hidden;
+  img {
+    border-radius: 0px 0px 24px 24px;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  @include g.mq(md) {
+    height: calc(100% - 97px);
+  }
+}
+
+.p-fv__inner {
+  position: relative;
+}
+
+.p-fv__description {
+  text-align: center;
+  //   text-shadow: 0px 0px 30px #fff;
+  font-family: g.$ff-jp-kiwi;
+  font-size: g.$fz-sm;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%; /* 17.5px */
+  @include g.mq(md) {
+    font-size: g.$fz-xl;
+  }
+}
+
+.p-fv__title {
+  margin-top: 20px;
+  margin-inline: auto;
+  max-width: 335px;
+  img {
+    width: 100%;
+  }
+  @include g.mq(md) {
+    margin-top: 24px;
+    max-width: 520px;
+  }
+}
+
+.p-fv__img-boxes {
+  margin-top: 10px;
+  position: relative;
+  height: 522px;
+  @include g.mq(md) {
+    margin-top: 0;
+    height: calc(603px - 43px);
+  }
+}
+
+.p-fv__text-img {
+  position: absolute;
+  top: 7px;
+  left: 0;
+  width: 142px;
+  //   height: 80px;
+  img {
+    width: 100%;
+    // height: 100%;
+  }
+  @include g.mq(md) {
+    width: 244px;
+    height: 130px;
+    top: 0;
+    left: 37px;
+  }
+}
+
+.p-fv__present-img {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  width: 110px;
+  height: 110px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  @include g.mq(md) {
+    width: 180px;
+    height: 180px;
+    top: 17px;
+    right: 127px;
+  }
+}
+
+.p-fv__main {
+  position: absolute;
+  width: 200px;
+  margin-inline: auto;
+  bottom: 11px;
+  left: 50%;
+  transform: translateX(-50%);
+  @include g.mq(md) {
+    bottom: 17px;
+    width: 250px;
+  }
+}
+
+.fv__main__sp-img {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  img {
+    width: 100%;
+  }
+}
+
+.p-fv__main__content {
+  position: absolute;
+  top: calc(50%);
+  left: 50%;
+  transform: translateX(-50%) translateY(-53%);
+  width: calc(100% - 20px * 2);
+  background-color: g.$color-white;
+  border-radius: 12.8px;
+  overflow: hidden;
+  @include g.mq(md) {
+    width: calc(100% - 25px * 2);
+    border-radius: 16px;
+  }
+}
+
+.fv__main__title {
+  color: g.$color-white;
+  text-align: center;
+  font-size: 12.8px;
+  font-weight: g.$fw-bold;
+  background: linear-gradient(
+    265deg,
+    #ac3790 -3.52%,
+    #d65a5c 44.94%,
+    #f4c06d 92.38%
+  );
+  padding-block: 7px 5px;
+
+  @include g.mq(md) {
+    font-size: g.$fz-md;
+    padding-block: 8px;
+  }
+}
+
+.fv__main__body {
+  padding-block: 8.8px 19.2px;
+
+  text-align: center;
+  @include g.mq(md) {
+    padding: 16px 12px 24px;
+  }
+}
+
+.fv__main__body-heading {
+  display: inline-block;
+  font-size: g.$fz-xs;
+  padding-bottom: 1px;
+  border-bottom: 2.4px solid g.$color-red;
+  @include g.mq(md) {
+    font-size: g.$fz-sm;
+  }
+}
+
+.fv__main__body-date {
+  display: block;
+  font-size: g.$fz-xs;
+  font-weight: g.$fw-bold;
+  margin-top: 3.2px;
+  @include g.mq(md) {
+    margin-top: 4px;
+    font-size: g.$fz-md;
+  }
+}
+
+.fv__main__body-button {
+  margin-top: 12.2px;
+  .c-button {
+    padding: 2px 22px 4px 22px;
+  }
+  @include g.mq(md) {
+    margin-top: 16px;
+    .c-button {
+      font-size: g.$fz-md;
+      padding: calc(6px - 2px) calc(24px - 2px) calc(8px - 2px) calc(24px - 2px);
+    }
+  }
+}
+
+.c-button {
+}
+
+.p-fv__food-img {
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 90px;
+  height: 141px;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+  @include g.mq(md) {
+    width: 212px;
+    height: 332px;
+  }
+}
+
+.p-fv__cats {
+  z-index: 1;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  @include g.mq(md) {
+    bottom: -43px;
+  }
+}
+.p-fv__cat-img {
+  width: 107px;
+  height: 127px;
+  position: relative;
+  @include g.mq(md) {
+    width: 233px;
+    height: 294px;
+  }
+}
+
+.fv__cat--black {
+  position: absolute;
+  bottom: 58px;
+  right: 0;
+  width: 62px;
+  img {
+    width: 100%;
+  }
+  @include g.mq(md) {
+    width: 170px;
+    height: 190px;
+    right: 63px;
+    bottom: 105px;
+  }
+}
+
+.fv__cat--sleep {
+  position: absolute;
+
+  bottom: 0;
+  width: 98px;
+  right: 9px;
+
+  img {
+    width: 100%;
+  }
+  @include g.mq(md) {
+    right: 0;
+    width: 233px;
+    height: 174px;
+  }
+}

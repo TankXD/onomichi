@@ -1,0 +1,12 @@
+@use "../global" as g;
+
+.l-header {
+  background-color: g.$color-white;
+
+  .l-header__inner {
+    padding: 16px 20px;
+    @include g.mq(md) {
+      padding: 14px 24px;
+    }
+  }
+}

@@ -1,0 +1,266 @@
+@use "../global/" as g;
+
+.p-spots {
+  position: relative;
+  margin-bottom: 45.7px;
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 45.7px;
+    left: 0;
+    z-index: -1;
+  }
+
+  &::before {
+    top: -45px;
+    background: url(../img/spots/spots-wave-top-sp.png) repeat-x left -3px bottom /
+      contain;
+  }
+
+  &::after {
+    bottom: -45.7px;
+    background: url(../img/spots/spots-wave-bt-sp.png) repeat-x left 1px top /
+      contain;
+  }
+
+  @include g.mq(md) {
+    margin-bottom: 120px;
+    &::before,
+    &::after {
+      height: 120px;
+      left: 0;
+    }
+
+    &::before {
+      top: -120px;
+      background: url(../img/spots/spots-wave-top.png) repeat-x left bottom /
+        contain;
+    }
+
+    &::after {
+      bottom: -120px;
+      background: url(../img/spots/spots-wave-bt.png) repeat-x left top /
+        contain;
+    }
+  }
+}
+.p-spots__bg-foot {
+  position: absolute;
+  right: calc(50% + 620px);
+  bottom: 0;
+  width: 100px;
+  height: 220px;
+
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.p-spots__head {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+
+  @include g.mq(md) {
+    flex-direction: row;
+    gap: 32px;
+  }
+}
+
+.p-spots__heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  @include g.mq(md) {
+    flex-direction: column;
+    min-width: 56px;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+}
+
+.p-spots__heading__icon {
+  width: 28px;
+  height: 28px;
+  @include g.mq(md) {
+    width: 56px;
+    height: 56px;
+  }
+}
+
+.p-spots__heading__title {
+  color: g.$color-white;
+  font-family: g.$ff-jp-kiwi;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 125%;
+  @include g.mq(md) {
+    writing-mode: vertical-rl;
+    font-size: 40px;
+    letter-spacing: 10.2px;
+  }
+}
+
+.p-spots__slide {
+  overflow-x: hidden;
+}
+//
+.swiper {
+}
+
+.p-spots__swiper {
+}
+//
+.swiper-wrapper {
+}
+
+.p-spots__swiper-wrapper {
+}
+//
+.swiper-slide {
+}
+
+.p-spots__swiper-slide {
+  width: 240px;
+  @include g.mq(sm) {
+    width: 320px;
+  }
+  @include g.mq(md) {
+    width: 344px;
+  }
+}
+//
+.p-spots__card {
+  background-color: g.$color-white;
+  border-radius: 12px;
+  overflow: hidden;
+  @include g.mq(md) {
+    border-radius: 24px;
+  }
+}
+
+.p-spots__card__img {
+  img {
+    width: 100%;
+    height: 180px;
+
+    @include g.mq(sm) {
+      height: 240px;
+    }
+  }
+}
+
+.p-spots__card__body {
+  padding: 16px 24px 31.16px;
+
+  min-height: 222.16px;
+  @include g.mq(md) {
+    padding: 24px 32px 40px;
+    min-height: 302px;
+  }
+}
+
+.p-spots__card__body-title {
+  text-align: center;
+  font-weight: 700;
+  @include g.mq(md) {
+    font-size: g.$fz-lg;
+  }
+}
+
+.p-spots__card__body-description {
+  text-align: start;
+  margin-top: 16px;
+  font-size: g.$fz-xs;
+  @include g.mq(md) {
+    font-size: g.$fz-md;
+    margin-top: 24px;
+  }
+}
+
+///
+
+.p-spots__body {
+  text-align: center;
+  padding-bottom: 19.84px;
+  position: relative;
+
+  @include g.mq(md) {
+    margin-top: 64px;
+    display: flex;
+    gap: 41px;
+    padding-bottom: 0;
+  }
+  @include g.mq(lg) {
+    gap: calc(81px / (1512px - 244px) * 100%);
+  }
+}
+.p-spots__body__swiper-btns {
+  position: absolute;
+  width: calc(944px / 1242px * 100%);
+  display: flex;
+  justify-content: space-between;
+  left: 30px;
+  top: -100px;
+}
+.p-spots__swiper-prev-btn,
+.p-spots__swiper-next-btn {
+  width: 80px;
+  height: 80px;
+  &::before,
+  &::after {
+    display: none;
+  }
+}
+.p-spots__swiper-prev-btn {
+  background: url(../img/spots/spots-prev.png) no-repeat center center / contain;
+}
+
+.p-spots__swiper-next-btn {
+  background: url(../img/spots/spots-next.png) no-repeat center center / contain;
+}
+
+.p-spots__body__logo {
+  img {
+    width: 255px;
+    height: 55px;
+    @include g.mq(md) {
+      width: 495px;
+      height: 107px;
+    }
+  }
+}
+
+.p-spots__body-content {
+  margin-top: 10px;
+  @include g.mq(md) {
+    margin-top: 0;
+  }
+}
+
+.p-spots__body__description {
+  color: g.$color-white;
+  font-size: 11.444px;
+  @include g.mq(md) {
+    display: inline-block;
+    font-size: g.$fz-md;
+  }
+}
+
+.p-spots__body__button {
+  margin-top: 23px;
+  @include g.mq(lg) {
+    text-align: right;
+    .c-button {
+      padding: calc(10px - 2px) calc(40px - 2px) calc(12px - 2px)
+        calc(40px - 2px);
+      border-width: 3px;
+      font-size: g.$fz-lg;
+    }
+  }
+}

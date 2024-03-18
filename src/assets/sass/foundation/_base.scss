@@ -1,0 +1,12 @@
+@use "../global" as g;
+
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-size: g.$fz-md;
+  font-family: g.$ff-jp-noto;
+  line-height: g.$lh-base;
+  color: g.$color-brown;
+  background-color: g.$color-l-blue;
+}

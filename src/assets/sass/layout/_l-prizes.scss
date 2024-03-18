@@ -1,0 +1,18 @@
+@use "../global/" as g;
+
+.l-prizes {
+  // margin-top: 57.67px;
+  margin-top: 30px;
+  @include g.mq(md) {
+    // margin-top: 154px;
+    margin-top: 60px;
+  }
+}
+
+.l-prizes__inner {
+  max-width: 550px;
+  margin-inline: auto;
+  @include g.mq(md) {
+    max-width: 1024px;
+  }
+}

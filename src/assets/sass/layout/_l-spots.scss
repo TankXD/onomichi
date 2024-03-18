@@ -1,0 +1,13 @@
+@use "../global/" as g;
+.l-spots {
+  background-color: g.$color-d-blue;
+}
+
+.l-spots__inner {
+  @include g.mq(md) {
+    padding-left: calc(100px / 1200px * 100%);
+  }
+  @include g.mq(lg) {
+    padding-left: calc(244px / 1512px * 100%);
+  }
+}

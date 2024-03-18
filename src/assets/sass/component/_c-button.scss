@@ -1,0 +1,28 @@
+@use "../global" as g;
+
+.c-button {
+  display: inline-block;
+  color: g.$color-brown;
+  font-family: g.$ff-jp-noto;
+  font-weight: g.$fw-bold;
+  border-radius: 40px;
+  border: 2px solid g.$color-brown;
+  background: g.$color-white;
+  box-shadow: 0px 4px 0px 0px g.$color-brown;
+  padding: calc(6px - 2px) calc(24px - 2px) calc(8px - 2px) calc(24px - 2px);
+  transition: background 0.3s;
+  &.c-button-small {
+    font-size: g.$fz-sm;
+  }
+  &.c-button-normal {
+    font-size: g.$fz-md;
+  }
+  &.c-button-large {
+    padding: calc(10px - 2px) calc(40px - 2px) calc(12px - 2px) calc(40px - 2px);
+    border-width: 3px;
+    font-size: g.$fz-lg;
+  }
+  &:hover {
+    background: g.$color-yellow;
+  }
+}

@@ -1,0 +1,303 @@
+@use "../global" as g;
+
+.p-contact__description {
+  margin-top: 24px;
+  text-align: center;
+  font-size: g.$fz-xs;
+  @include g.mq(md) {
+    margin-top: 33px;
+    font-size: g.$fz-md;
+  }
+}
+
+.p-contact__form {
+  margin-top: 24px;
+  @include g.mq(md) {
+    margin-top: 40px;
+  }
+}
+
+.p-contact__input-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  @include g.mq(md) {
+  }
+}
+
+.p-contact__input-item {
+  @include g.mq(md) {
+    display: flex;
+    gap: 41px;
+    align-items: center;
+    &:last-child {
+      align-items: flex-start;
+    }
+  }
+}
+
+.p-contact__input-head {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  @include g.mq(md) {
+    width: 180px;
+    flex-shrink: 0;
+  }
+}
+
+.p-contact__input-label {
+  font-size: g.$fz-sm;
+  font-weight: g.$fw-bold;
+  @include g.mq(md) {
+    font-size: g.$fz-md;
+  }
+}
+
+.p-contact__input-tag {
+  color: g.$color-white;
+  font-weight: g.$fw-bold;
+  font-size: g.$fz-xs;
+  background-color: g.$color-red;
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
+.p-contact__input-body {
+  padding-top: 8px;
+  @include g.mq(md) {
+    flex-grow: 1;
+    padding-top: 0;
+  }
+}
+
+.p-contact__input-text {
+  padding: 11px 14px 12px;
+  @include g.mq(md) {
+    padding: 13px 14px 12px;
+  }
+}
+.p-contact__input-text,
+.p-contact__input-select {
+  height: 56px;
+}
+
+.p-contact__input-text,
+.p-contact__input-select,
+.p-contact__input-textarea {
+  outline: none;
+  border: 2px solid transparent;
+  &:focus {
+    border: 2px solid g.$color-blue-main;
+  }
+}
+
+.p-contact__input-text,
+.p-contact__input-textarea {
+  border-radius: 8px;
+  background-color: g.$color-gray;
+  width: 100%;
+
+  font-size: g.$fz-sm;
+  &::placeholder {
+    color: g.$color-d-gray;
+  }
+  @include g.mq(md) {
+    font-size: g.$fz-md;
+  }
+}
+
+.p-contact__input-select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+  padding: 13px 16px 16px 14px;
+
+  border-radius: 8px;
+  background-color: g.$color-gray;
+  font-size: g.$fz-sm;
+  background: url(../img/contact/select-button.png) no-repeat center right -2px/52px
+    55px;
+
+  @include g.mq(md) {
+    font-size: g.$fz-md;
+    padding: 15px 16px 16px 14px;
+  }
+}
+
+.contact__radios {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  height: 24px;
+  @include g.mq(md) {
+    height: 56px;
+    gap: 23px;
+  }
+}
+
+.contact-radio {
+  position: relative;
+  .contact-radio__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+
+    &:focus + .contact-radio__text {
+      &::before {
+        border: 2px solid g.$color-d-blue;
+      }
+    }
+    &:checked + .contact-radio__text {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  .contact-radio__text {
+    position: relative;
+    padding-left: calc(24px + 8px);
+    font-size: g.$fz-sm;
+    @include g.mq(md) {
+      font-size: g.$fz-md;
+      padding-left: 34px;
+    }
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      transform: translateY(-50%);
+      border-radius: 50%;
+    }
+    &::before {
+      width: 24px;
+      height: 24px;
+      left: 0;
+      background-color: g.$color-gray;
+    }
+    &::after {
+      opacity: 0;
+      width: 9px;
+      height: 9px;
+      left: 8px;
+      background-color: g.$color-d-blue;
+    }
+  }
+}
+
+.p-contact__input-textarea {
+  min-width: 100%;
+  height: 160px;
+  resize: vertical;
+  padding: 13px 14px 12px;
+
+  @include g.mq(md) {
+    max-height: 160px;
+    padding: 14px 14px 12px;
+  }
+}
+
+.p-contact__privacy {
+  text-align: center;
+  margin-top: 22px;
+  @include g.mq(md) {
+    margin-top: 40px;
+  }
+}
+
+.p-contact__privacy__checkbox {
+  .p-contact__privacy__input {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    clip: rect(0, 0, 0, 0);
+    overflow: hidden;
+    &:focus + .p-contact__privacy__text {
+      &::before {
+        border: 2px solid g.$color-d-blue;
+      }
+    }
+    &:checked {
+      & + .p-contact__privacy__text {
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .p-contact__privacy__text {
+    padding-left: calc(24px + 12px);
+    font-size: g.$fz-sm;
+    position: relative;
+    @include g.mq(md) {
+      font-size: g.$fz-md;
+    }
+    &::before,
+    &::after {
+      position: absolute;
+      content: "";
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &::before {
+      left: 0;
+      width: 24px;
+      height: 24px;
+      background-color: g.$color-gray;
+      border-radius: 4px;
+    }
+    &::after {
+      opacity: 0;
+      width: 16px;
+      height: 16px;
+      left: 4px;
+      background: url("../img/contact/check-icon.svg") no-repeat center /
+        contain;
+      filter: g.$filter-svg;
+    }
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}
+
+.p-contact__button {
+  margin-top: 24px;
+  text-align: center;
+  @include g.mq(md) {
+    margin-top: 40px;
+  }
+  .c-button {
+    @include g.mq(md) {
+      width: 240px;
+    }
+  }
+}
+
+.is-invalid {
+  border: 1px solid g.$color-red;
+  background-color: rgba(g.$color-red, 0.1);
+
+  & + .p-contact__privacy__text {
+    &::before {
+      border: 1px solid g.$color-red;
+      background-color: rgba(g.$color-red, 0.1);
+    }
+  }
+  &:before {
+    border: 1px solid g.$color-red;
+  }
+  &:focus {
+    border: 1px solid g.$color-red;
+  }
+  &.p-contact__input-select {
+    background-image: url(../img/contact/select-button-red.svg);
+  }
+}

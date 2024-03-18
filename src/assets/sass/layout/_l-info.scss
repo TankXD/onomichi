@@ -1,0 +1,27 @@
+@use "../global/" as g;
+
+.l-info {
+  margin-top: 30.67px;
+
+  @include g.mq(sm) {
+    margin-top: 60px;
+  }
+  @include g.mq(md) {
+    margin-top: 121px;
+  }
+}
+
+.l-info__inner {
+  padding-inline: g.$padding-inline-sp;
+  max-width: g.$inner-width-sm;
+  margin-inline: auto;
+  margin-bottom: 33px;
+
+  @include g.mq(sm) {
+    margin-bottom: 64px;
+  }
+  @include g.mq(md) {
+    max-width: calc(g.$inner-width-lg + g.$padding-inline-sp * 2);
+    margin-bottom: 121px;
+  }
+}

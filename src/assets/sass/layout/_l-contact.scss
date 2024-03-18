@@ -1,0 +1,18 @@
+@use "../global" as g;
+.l-contact {
+  padding-top: 39px;
+  padding-bottom: 43px;
+  background-color: g.$color-white;
+  @include g.mq(md) {
+    padding-block: 119px 121px;
+  }
+}
+
+.l-contact__inner {
+  padding-inline: g.$padding-inline-sp;
+  margin-inline: auto;
+  @include g.mq(md) {
+    padding-inline: 39px 41px;
+    max-width: calc(g.$inner-width-md + g.$padding-inline-md * 2);
+  }
+}

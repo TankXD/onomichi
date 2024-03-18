@@ -1,0 +1,25 @@
+@use "../global/" as g;
+
+.l-how-to-enter {
+  margin-top: 64.8px;
+  overflow: hidden;
+  padding-bottom: calc(57.67px - 30px);
+  @include g.mq(md) {
+    margin-top: 60px;
+    padding-top: 60px;
+    padding-bottom: calc(154px - 60px);
+  }
+}
+
+.l-how-to-enter__inner {
+  padding-inline: 20px;
+  max-width: g.$inner-width-sp;
+  margin-inline: auto;
+  // overflow: hidden;
+
+  @include g.mq(md) {
+    padding-inline: 36px;
+    max-width: calc(1440px + 36px * 2);
+    // overflow: visible;
+  }
+}

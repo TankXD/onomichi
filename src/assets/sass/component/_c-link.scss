@@ -1,0 +1,7 @@
+@use "../global" as g;
+.c-link {
+  text-decoration: underline;
+  &:hover {
+    color: g.$color-d-blue;
+  }
+}

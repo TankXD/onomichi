@@ -1,0 +1,20 @@
+@use "../global/" as g;
+
+.l-qna {
+}
+
+.l-qna__inner {
+  padding-top: 40px;
+  padding-inline: g.$padding-inline-sp;
+  max-width: g.$inner-width-sm;
+  margin-inline: auto;
+  @include g.mq(md) {
+    max-width: calc(g.$inner-width-md + 40px * 2);
+    padding-inline: g.$padding-inline-md;
+  }
+  @include g.mq(lg) {
+    padding-top: 121px;
+    max-width: calc(g.$inner-width-lg + 40px * 2);
+    padding-inline: g.$padding-inline-md;
+  }
+}

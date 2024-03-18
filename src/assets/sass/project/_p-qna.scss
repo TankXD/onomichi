@@ -1,0 +1,142 @@
+@use "../global/" as g;
+
+.p-qna {
+}
+
+.p-qna__boxes {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  @include g.mq(md) {
+    margin-top: 40px;
+    gap: 24px;
+  }
+}
+
+.p-qna__box {
+  border-radius: 12px;
+  border: 2px solid g.$color-brown;
+  overflow: hidden;
+  @include g.mq(md) {
+    border-radius: 16px;
+  }
+
+  &.is-open-qna {
+    .p-qna__head {
+      padding-bottom: 12px;
+      @include g.mq(md) {
+        padding-bottom: 24px;
+      }
+    }
+    .p-qna__head-btn {
+      &::after {
+        transform: translate(-50%, -50%) rotate(-90deg);
+      }
+    }
+  }
+}
+
+.p-qna__head {
+  cursor: pointer;
+  list-style: none;
+  background-color: g.$color-white;
+  padding: calc(11.4px - 2px) calc(16px - 2px) calc(12px - 2px) calc(16px - 2px);
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  @include g.mq(md) {
+    padding: 22px 20px 18px 22px;
+    gap: 16px;
+  }
+}
+
+.p-qna__head-icon {
+  color: g.$color-blue-main;
+  font-family: g.$ff-en-jose;
+  font-size: g.$fz-xl;
+  line-height: 1.25;
+  @include g.mq(md) {
+    font-size: 32px;
+  }
+}
+
+.p-qna__head-text {
+  font-size: g.$fz-sm;
+  font-weight: g.$fw-bold;
+  flex-grow: 1;
+  @include g.mq(md) {
+    font-size: g.$fz-lg;
+  }
+}
+
+.p-qna__head-btn {
+  display: inline-block;
+  width: 26.182px;
+  height: 26.182px;
+  background-color: g.$color-blue-main;
+  position: relative;
+  border-radius: 50%;
+  @include g.mq(md) {
+    width: 48px;
+    height: 48px;
+  }
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: g.$color-white;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  &::before {
+    width: 10.182px;
+    height: 2px;
+    @include g.mq(md) {
+      width: 18.667px;
+      height: 2.667px;
+    }
+  }
+  &::after {
+    width: 2px;
+    height: 10.182px;
+    @include g.mq(md) {
+      width: 2.667px;
+      height: 18.667px;
+    }
+  }
+}
+
+.p-qna__body {
+  display: none;
+}
+
+.p-qna__body-answer {
+  background-color: g.$color-gray;
+  padding: 15px calc(16px - 2px) calc(16px - 2px) calc(16px - 2px);
+  display: flex;
+  align-items: center;
+  @include g.mq(md) {
+    padding: 22px calc(24px - 2px) calc(22px - 2px) calc(24px - 2px);
+  }
+}
+.p-qna__body-icon {
+  color: g.$color-blue-main;
+  font-family: g.$ff-en-jose;
+  font-size: g.$fz-xl;
+  line-height: 1.25;
+  @include g.mq(md) {
+    font-size: 32px;
+  }
+}
+
+.p-qna__body-text {
+  margin-left: 16px;
+  font-size: g.$fz-sm;
+  @include g.mq(md) {
+    font-size: g.$fz-md;
+  }
+}

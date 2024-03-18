@@ -1,0 +1,18 @@
+@use "../global/" as g;
+
+.p-prizes__bottom-bg {
+  position: relative;
+  z-index: -2;
+  overflow: hidden;
+  margin-top: -45px;
+  @include g.mq(md) {
+    margin-top: 0;
+  }
+  img {
+    // position: absolute;
+    display: inline-block;
+    min-width: 375px;
+    min-height: 260px;
+    object-fit: cover;
+  }
+}

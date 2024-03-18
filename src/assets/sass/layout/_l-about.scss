@@ -1,0 +1,22 @@
+@use "../global/" as g;
+.l-about {
+  position: relative;
+  padding-top: 32px;
+  overflow: hidden;
+  @include g.mq(md) {
+    padding-top: 80px;
+  }
+}
+
+.l-about__inner {
+  padding-inline: 20px;
+  max-width: g.$inner-width-sp;
+  margin-inline: auto;
+  text-align: center;
+  @include g.mq(sm) {
+    max-width: g.$inner-width-sm;
+  }
+  @include g.mq(md) {
+    max-width: calc(g.$inner-width-md + 20px * 2);
+  }
+}
